@@ -5,10 +5,7 @@ import { PlayerListComponent } from 'src/modules/pages/player-list/player-list.c
 const routes: Routes = [
   {
     path: '',
-    // TODO: Aqui va el component hijo que se carga con el path
     component: PlayerListComponent,
-    // loadChildren: () =>
-    //     import('../modules/pages/pages.module').then((m) => m.PagesModule),
   },
 ];
 

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PlayerListComponent } from './player-list/player-list.component';
+import { TopNavComponent } from '../navigation/top-nav/top-nav.component';
+import { NavigationModule } from '../navigation/navigation.module';
 
 
 
@@ -9,7 +11,8 @@ import { PlayerListComponent } from './player-list/player-list.component';
     PlayerListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NavigationModule
   ]
 })
 export class PagesModule { }
