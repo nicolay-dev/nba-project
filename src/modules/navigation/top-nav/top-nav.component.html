@@ -1,4 +1,4 @@
 <div class="topnav">
-    <a class="active" href="#home">PLAYER LIST</a>
-    <a href="#news">MATCHES PAGE</a>
+    <a href="/player-list" [ngClass]="{'active': active}">PLAYER LIST</a>
+    <a href="/matches" [ngClass]="{'active': !active}">MATCHES PAGE</a>
   </div>
