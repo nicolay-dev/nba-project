@@ -23,4 +23,13 @@ export class PlayerListComponent implements OnInit {
     
   }
 
+  detailClick(player: PlayerI){
+    console.log(player);    
+  }
+
+  sortBy(option: string){
+    console.log(option);
+    
+  }
+
 }

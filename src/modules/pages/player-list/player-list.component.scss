@@ -1,0 +1,36 @@
+#tab_view {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #tab_view td, #tab_view th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  #tab_view td {
+    cursor: pointer;
+  }
+  
+  #tab_view tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #tab_view tr:hover {background-color: #ddd;}
+  
+  #tab_view th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    // text-align: center;
+    background-color: #04AA6D;
+    color: white;
+    
+    
+  }
+
+  a{
+    color: white;
+  }
+
+  #linkText{
+    cursor: pointer;
+  }

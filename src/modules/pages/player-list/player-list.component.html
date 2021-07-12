@@ -1,7 +1,20 @@
 <app-top-nav [tabName]="tabName"></app-top-nav>
 <div *ngIf = "playerList[0] != undefined">
-    <div *ngFor = "let player of playerList, let index = index">
-        <p>{{player.first_name | json}}</p>
-    </div>
+    <br>
+
+    <table id='tab_view'>
+        <tr textalign= 'center'>
+            <th><strong id="linkText" (click)="sortBy('First_Name')">First_Name</strong></th>
+            <th><strong id="linkText" (click)="sortBy('Last_Name')">Last_Name</strong></th>
+            <th><strong id="linkText" (click)="sortBy('Height')">Height (in)</strong></th>
+            <th><strong id="linkText" (click)="sortBy('Height')">Height (m)</strong></th>
+        </tr>
+        <tr *ngFor = "let player of playerList, let index = index" (click)="detailClick(player)" >
+            <td>{{player.first_name}}</td>
+            <td>{{player.last_name}}</td>
+            <td>{{player.h_in}}</td>
+            <td>{{player.h_meters}}</td>
+        </tr>
+    </table>
 </div>
 
