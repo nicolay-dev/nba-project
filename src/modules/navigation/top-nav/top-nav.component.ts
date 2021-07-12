@@ -15,7 +15,6 @@ export class TopNavComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    console.log(this.tabName);
     this.tabName === 'player-list' ? this.active = true: this.active = false;
   }
 

@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { PlayerI } from '../interfaces/player.interface';
+import { DataRawI } from "../interfaces/data-raw.interface";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getData():Observable<PlayerI[]>{
-    return this.http.get<PlayerI[]>(this.urlApi + '', {});
+  getData():Observable<DataRawI>{
+    return this.http.get<DataRawI>(this.urlApi + '', {});
   }
 }

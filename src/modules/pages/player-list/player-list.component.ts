@@ -10,15 +10,17 @@ import { DataService } from 'src/modules/app-common/services/data.service';
 })
 export class PlayerListComponent implements OnInit {
   tabName = 'player-list';
-  private playerList: PlayerI[] = [];
+  playerList: PlayerI[] = [];
 
-  constructor(private dataW: DataService) { }
+  constructor(private dataW: DataService) {
+    this.dataW.getData().subscribe((res)=>{
+      this.playerList = res.values;
+      // console.log(this.playerList);
+    });
+   }
 
   ngOnInit(): void {
-    this.dataW.getData().subscribe((res)=>{
-      this.playerList = res;
-      console.log(this.playerList);
-    });
+    
   }
 
 }
