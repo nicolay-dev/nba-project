@@ -1,0 +1,58 @@
+<app-top-nav [tabName]="tabName"></app-top-nav>
+<div class="container">
+    <br>
+    <!-- if-template -->
+    <!-- Switch between detail view & List view  -->
+    <div *ngIf="playerSelected.first_name === undefined; else elseBlock">
+        <table id='tab_view'>
+            <tr textalign='center'>
+                <th><strong id="linkText" (click)="sortBy('First_Name', playerList)">First_Name</strong></th>
+                <th><strong id="linkText" (click)="sortBy('Last_Name', playerList)">Last_Name</strong></th>
+                <th><strong id="linkText" (click)="sortBy('Height', playerList)">Height (in)</strong></th>
+                <th><strong id="linkText" (click)="sortBy('Height', playerList)">Height (m)</strong></th>
+            </tr>
+            <tr *ngFor="let player of playerList, let index = index" (click)="detailClick(player)">
+                <td>{{player.first_name}}</td>
+                <td>{{player.last_name}}</td>
+                <td>{{player.h_in}}</td>
+                <td>{{player.h_meters}}</td>
+            </tr>
+        </table>
+    </div>
+    <!-- else template (Detail_view) -->
+    <ng-template #elseBlock>
+        <div class="row" style="align-items: center;">
+            <div class="col-sm">
+                <h3>
+                    <p>Player Detail:</p>
+                </h3>
+                <ul>
+                    <li><strong>First Name:</strong> {{playerSelected.first_name}}</li>
+                    <li><strong>Last Name:</strong> {{playerSelected.last_name}}</li>
+                    <li><strong>Height in inches:</strong> {{playerSelected.h_in}}</li>
+                    <li><strong>Height in Meters:</strong> {{playerSelected.h_meters}}</li>
+                </ul>
+                <h5>
+                    <p>Others players with same Height:</p>
+                </h5>
+            </div>
+            <div class="col-sm">
+                <button (click)="back()">Back to List</button>
+            </div>
+        </div>
+        <table id='tab_view'>
+            <tr textalign='center'>
+                <th><strong id="linkText" (click)="sortBy('First_Name', PlayersFiltered)">First_Name</strong></th>
+                <th><strong id="linkText" (click)="sortBy('Last_Name', PlayersFiltered)">Last_Name</strong></th>
+                <th><strong id="linkText" (click)="sortBy('Height', PlayersFiltered)">Height (in)</strong></th>
+                <th><strong id="linkText" (click)="sortBy('Height', PlayersFiltered)">Height (m)</strong></th>
+            </tr>
+            <tr *ngFor="let player of PlayersFiltered, let index = index" (click)="detailClick(player)">
+                <td>{{player.first_name}}</td>
+                <td>{{player.last_name}}</td>
+                <td>{{player.h_in}}</td>
+                <td>{{player.h_meters}}</td>
+            </tr>
+        </table>
+    </ng-template>
+</div>
