@@ -6,11 +6,12 @@ You need have installed [Node](https://nodejs.org/dist/v16.4.2/node-v16.4.2-x64.
 
 ## How to run?
 
-Locale yourself into root project folder,
+Clone the repo via https: `https://github.com/NicolayJG/nba-project.git` or ssh: `git@github.com:NicolayJG/nba-project.git`.
+Be sure to locale yourself into root project folder,
 Run `npm i` to install dependencies.
 Then run `ng build` to build the project.
-After that you can run `ng serve` for launch a locale server.
-Then you can navigate to `http://localhost:4200/` and use the SPA
+After that you can run `ng serve` for launch a local server.
+Use the app accessing to `http://localhost:4200/` in your browser.
 
 ## Running unit tests
 
