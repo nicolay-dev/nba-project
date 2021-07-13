@@ -1,3 +1,4 @@
+import { HttpClient, HttpHandler } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MatchesComponent } from './matches.component';
@@ -8,7 +9,8 @@ describe('MatchesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MatchesComponent ]
+      declarations: [ MatchesComponent ],
+      providers: [HttpClient, HttpHandler]
     })
     .compileComponents();
   });
