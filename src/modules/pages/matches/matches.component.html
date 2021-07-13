@@ -1,2 +1,38 @@
 <app-top-nav [tabName]="tabName"></app-top-nav>
-<p>matches works!</p>
+<br>
+<div class="container">
+    <!-- <div *ngIf="addUpInches !== ''"> -->
+        <div class="row" style="text-align: center;">
+            <p>Total Findings: {{playerMatches.length}}</p>
+            <div class="col-sm">
+                <strong><p>Player 1</p></strong>
+            </div>
+            <div class="col-sm">
+                <strong><p>Player 2</p></strong>
+            </div>
+        </div>
+        <table id='tab_view'>
+            <tr textalign='center'>
+                <th><strong id="linkText">Name 1</strong></th>
+                <th><strong id="linkText">LastN 1</strong></th>
+                <th><strong id="linkText">in 1</strong></th>
+                <th><strong id="linkText">m 1</strong></th>
+                <th><strong id="linkText">Name 2</strong></th>
+                <th><strong id="linkText">LastN 2</strong></th>
+                <th><strong id="linkText">in 2</strong></th>
+                <th><strong id="linkText">m 2</strong></th>
+            </tr>
+                <tr *ngFor="let player of playerMatches">
+                    <td>{{player.player1.first_name}}</td>
+                    <td>{{player.player1.last_name}}</td>
+                    <td>{{player.player1.h_in}}</td>
+                    <td>{{player.player1.h_meters}}</td>
+                    <td>{{player.player2.first_name}}</td>
+                    <td>{{player.player2.last_name}}</td>
+                    <td>{{player.player2.h_in}}</td>
+                    <td>{{player.player2.h_meters}}</td>
+                </tr>
+            
+        </table>
+    <!-- </div> -->
+</div>
